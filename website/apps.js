@@ -4,7 +4,7 @@ const code = document.querySelector("code");
 const repoUrl = "https://api.github.com/repos/atharva20-coder/nortonjs";
 const headers = {
   Authorization:
-    "Bearer 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",
+    "Bearer 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",
 };
 
 const setProgress = () => {
