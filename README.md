@@ -28,6 +28,24 @@ The f argument should be a function that takes a single input argument t and ret
 
 The laplaceTransform function returns a string representing the Laplace transform of the function in terms of 's'.
 
+## calculateSolarPanelAngle
+
+This function calculates the optimal tilt angle and direction for a solar panel based on the geographic location and date.
+
+## Usage
+
+```js
+const calculateSolarPanelAngle = require('./calculateSolarPanelAngle');
+
+const latitude = 40.7128; // New York City
+const longitude = -74.006;
+const date = new Date('2023-01-01T12:00:00');
+
+const result = calculateSolarPanelAngle(latitude, longitude, date);
+console.log(result);
+// { tiltAngle: 32.6113729028831, direction: 183.17967089929075 }
+
+
 # Testing
 To run the tests, you can use the following command
 
