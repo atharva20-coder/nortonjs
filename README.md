@@ -27,12 +27,13 @@ console.log(laplace); // L(s) = 2.6666666666666665/(s^3)
 The f argument should be a function that takes a single input argument t and returns a number. The Laplace transform of the function will be computed over the interval [0, tMax].
 
 The laplaceTransform function returns a string representing the Laplace transform of the function in terms of 's'.
-
+<br>
+<br>
 ## calculateSolarPanelAngle
 
 This function calculates the optimal tilt angle and direction for a solar panel based on the geographic location and date.
 
-## Usage
+### Usage
 
 ```js
 const calculateSolarPanelAngle = require('./calculateSolarPanelAngle');
