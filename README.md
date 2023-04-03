@@ -12,15 +12,16 @@ The laplaceTransform function takes three arguments:
 `s`: The value of 's' in the Laplace transform
 `tMax`: The maximum value of 't' in the time domain (optional, defaults to infinity)
 
-`import laplaceTransform from './laplaceTransform.js';`
+<code>
+import laplaceTransform from './laplaceTransform.js';
 
-`const f = t => t ** 2;`
-`const s = 2;
-const tMax = 10;`
+const f = t => t ** 2;
+const s = 2;
+const tMax = 10;
 
-`const laplace = laplaceTransform(f, s, tMax);`
-`console.log(laplace); // L(s) = 2.6666666666666665/(s^3)`
-
+const laplace = laplaceTransform(f, s, tMax);
+console.log(laplace); // L(s) = 2.6666666666666665/(s^3)
+</code>
 The f argument should be a function that takes a single input argument t and returns a number. The Laplace transform of the function will be computed over the interval [0, tMax].
 
 The laplaceTransform function returns a string representing the Laplace transform of the function in terms of 's'.
