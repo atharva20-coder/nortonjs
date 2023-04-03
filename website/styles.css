@@ -1,0 +1,231 @@
+body {
+  color: #333;
+  font-family: "Dosis", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: rgba(255, 255, 255, 0.51);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15.9px);
+  -webkit-backdrop-filter: blur(15.9px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.logo {
+  float: left;
+  margin-left: 120px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav li:first-child {
+  margin-left: 0;
+}
+
+nav a {
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:hover {
+  color: #027aff;
+}
+
+main {
+  max-width: 1140px;
+  padding: 100px 16px;
+  margin: 0 auto;
+}
+
+.hero {
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(247, 253, 166, 1) 11.2%,
+    rgba(128, 255, 221, 1) 57.8%,
+    rgba(255, 128, 249, 1) 85.9%
+  );
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15.9px);
+  -webkit-backdrop-filter: blur(15.9px);
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 100px 20px;
+  text-align: center;
+}
+.hero h1 {
+  color: #333;
+  font-size: 48px;
+  margin: 0;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border: none; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+.hero p {
+  color: #555;
+  font-size: 18px;
+  margin: 20px 0;
+  padding-top: 60px;
+}
+
+.btn {
+  background-color: #027aff;
+  border-radius: 50px;
+  color: #fff;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  padding: 12px 30px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #027aff;
+}
+
+.page-progress {
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(247, 253, 166, 1) 11.2%,
+    rgba(128, 255, 221, 1) 57.8%,
+    rgba(255, 128, 249, 1) 85.9%
+  );
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  height: 8px;
+  position: fixed;
+  z-index: 100;
+}
+
+.progress-bar {
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(247, 253, 166, 1) 11.2%,
+    rgba(128, 255, 221, 1) 57.8%,
+    rgba(255, 128, 249, 1) 85.9%
+  );
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  height: 12px;
+  width: 100%;
+  position: fixed;
+}
+
+.code-box {
+  background-color: #261905;
+  border-radius: 8px;
+  padding: 10px;
+  position: relative;
+  margin: 0 auto;
+  max-width: 600px;
+  height: 20px;
+  color: #fff;
+}
+
+.code-box pre {
+  margin: 0;
+  font-size: 16px;
+}
+.copy-btn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border: none;
+  border-left: 3px solid orange;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: #261905;
+  color: orange;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 10px;
+  height: 40px;
+  width: 80px;
+}
+
+.code-box code,
+pre {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border: none; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+#github-stats {
+  display: inline-block;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+#github-stats span {
+  font-weight: bold;
+  color: #0366d6;
+}
+
+#github-stats i {
+  margin-right: 5px;
+}

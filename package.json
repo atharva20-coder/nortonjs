@@ -1,0 +1,37 @@
+{
+  "name": "nortonjs",
+  "version": "1.0.0",
+  "description": "A JavaScript library for Electrical Engineers",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "npm-run-all --parallel test:*",
+    "test:laplace": "jest test/laplace.test.js",
+    "test:causal": "jest test/causalNon.test.js",
+    "test:optimalTiltAngle": "jest test/optimalTiltAngle.test.js",
+    "test:twosComplement": "jest test/twosComplement.test.js",
+    "test:dft": "jest test/dft.test.js",
+    "test:idft": "jest test/idft.test.js",
+    "test:performanceMetrics": "jest test/performanceMetrics.test.js"
+  },
+  "author": "Atharva Joshi <atharvajoshi2520@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
+    "babel-jest": "^29.5.0",
+    "chai": "^4.3.7",
+    "jest": "^29.4.3",
+    "mocha": "^10.2.0",
+    "npm-run-all": "^4.1.5",
+    "npm-watch": "^0.11.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  },
+  "dependencies": {
+    "mathjs": "^11.7.0"
+  }
+}
