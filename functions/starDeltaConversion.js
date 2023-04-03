@@ -1,11 +1,10 @@
 // Function to convert star to delta
 function starToDelta(resistance) {
-  const deno = resistance[0] + resistance[1] + resistance[2];
-  const deltaR1 = (resistance[0] * resistance[1]) / deno;
-  const deltaR2 = (resistance[1] * resistance[2]) / deno;
-  const deltaR3 = (resistance[2] * resistance[0]) / deno;
+  const deltaR12 = (resistance[0] + resistance[1]) + ((resistance[0] * resistance[1])/resistance[2]);
+  const deltaR13 = (resistance[0] + resistance[2]) + ((resistance[0] * resistance[2])/resistance[1]);
+  const deltaR23 = (resistance[1] + resistance[3]) + ((resistance[1] * resistance[2])/resistance[0]);
 
-  return { deltaR1, deltaR2, deltaR3 };
+  return { deltaR12, deltaR13, deltaR23 };
 }
 
 module.exports = starToDelta;
